@@ -2,9 +2,11 @@
 
 The safe echo & quoting utility you always knew you needed, but were too afraid to ask [for].
 
-Do you tremble at the thought of using echo because of its unpredictable behavior?
-Do you cringe every time you have to use printf %q, only to end up with extra spaces and maddening newlines?
-Welcome to cho/choq—your simple, sane solution for echoing and quoting strings exactly the way you mean them.
+- Do you tremble at the thought of using echo because of its unpredictable behavior?
+ - (You have to sanitize if your echo supports -options)
+- Do you cringe every time you have to use printf %q, only to end up with extra spaces and maddening newlines?
+
+Welcome to cho/choq — your simple, sane solution for echoing and quoting strings exactly the way you mean them.
 
 ## Quick Examples
 
@@ -12,8 +14,8 @@ Here’s what cho/choq can do for you:
 
 ```sh
 # Basic echo with cho:
-$ cho Safe,   "and inter-arg whitespace   is condensed."
-Safe, and inter-arg whitespace   is condensed.
+$ cho Safe,   "and between-arg whitespace   is condensed."
+Safe, and between-arg whitespace   is condensed.
 
 # No options are processed:
 $ cho -e cmd 'This is an arg.' -options are echoed as-is
