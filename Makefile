@@ -9,6 +9,7 @@ binsys="$(dirsys)/$(binname)"
 cho: Makefile cho.c
 	cc -O3 -o "$(binname)" cho.c
 	strip -- "$(binname)"
+	[ -f choq ] || ln -s cho choq
 
 install:
 	@echo "Use installuser for $(diruser)"
