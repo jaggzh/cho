@@ -1,6 +1,6 @@
 # cho / choq
 
-The safe echo & quoting utility you always knew you needed, but were too afraid to ask.
+The safe echo & quoting utility you always knew you needed, but were too afraid to ask [for].
 
 Do you tremble at the thought of using echo because of its unpredictable behavior?
 Do you cringe every time you have to use printf %q, only to end up with extra spaces and maddening newlines?
