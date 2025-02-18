@@ -19,11 +19,17 @@ cho: Makefile cho.c
 	[ -f choq ] || ln -s cho choq
 
 install:
-	@echo "Use installuser for $(diruser)"
-	@echo "    installsys for /usr/bin/cho and /usr/bin/choq"
+	@echo "'make install-pkg' is the preferred way to install as a system package (right now)"
+	@echo "  ..But for a user-install, if $(diruser) is an okay path for you, use:"
+	@echo "'make installuser' (see below for more stuff)"
+	@echo
+	@echo "Use install-pkg to use checkinstall to create a package"
+	@echo "                   (which installs cho and choq to $(dirsys))"
+	@echo "Use installuser for manual install to $(diruser)"
+	@echo "    installsys for manual install to $(dirsys)/cho and $(dirsys)/choq"
 	@echo "    installall for both"
 
-install-deb-sys:
+install-pkg:
 	@echo "Safe echo and quoting echo. Alternatives to echo and printf (for simple echos)." > description-pak
 	@echo "We're going to sudo to run checkinstall so we can make a system package and install it."
 	@echo " (on my system checkinstall defaults to Debian. I imagine this is system-dependent.)"
